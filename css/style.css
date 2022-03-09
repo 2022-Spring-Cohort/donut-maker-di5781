@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+
+  header {
+    background: rgba(96, 136, 221, 0.089);
+    /* height: 15vh; */
+    text-align: center;
+  }
+  header ul{
+    display: flex;
+    list-style: none;
+    justify-content: center
+  }
+  header li{
+    padding: 1em;
+    background-color: aqua;
+  }
+  header li p{
+    display: none;
+  }
+  header li:hover p{
+    background-color: red;
+    display: block;
+    width: 20em;
+  }
+  footer{
+    background: rgba(96, 136, 221, 0.089);
+    height: 10vh;
+    text-align: center;
+  }
+
+  header h1 {
+    text-align: center;
+    text-shadow: 0 0 3px red;
+    font-size: 70;
+    font-style: italic; 
+    /* color: darkblue;  */
+    font-weight: bold;
+    padding: .2em;
+  }
+  .nav-photo{
+    display:flex;
+    height: 50px;
+  }
+  /* .header-container {
+      display: flex;
+      flex-direction: row;
+  }
+  .company-links {
+      display: flex;
+      text-align: center;
+    
+  } */
+  .donutCountBtn{
+    background-color: rgb(37, 170, 214); 
+    border: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 70px;
+    width: 300px;
+    border-radius: 5%;
+  }
+  button:disabled{
+    background-color : gray;
+    }
+
+  .autoClickerBtn{
+    background-color: rgb(37, 170, 214); 
+    border: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 70px;
+    width: 300px;
+    border-radius: 5%;
+  }
+  .multiplierBtn{
+    background-color: rgb(37, 170, 214); 
+    border: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 70px;
+    width: 300px;
+    border-radius: 5%;
+  }
+  .resetBtn{
+    background-color: rgb(37, 170, 214); 
+    border: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 70px;
+    width: 300px;
+    border-radius: 5%;
+  }
+  .displayCostForAutoClicker{
+    color: red;
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .displayCostForMultiplier{
+    color: red;
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .icon{
+    object-fit: cover;
+    height:100%;
+  }
+  .icon1{
+    height: 30px;
+
+
+  }
+  .image-text-container {
+    display: flex;
+    gap: 20px;
+  }
+  .img-company img{
+    height: 100%;;
+  }
+
+  .flexItem flexItem-word {
+    text-align:left;
+    font-size: 50px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    /* margin-right: 7em; */
+  }
