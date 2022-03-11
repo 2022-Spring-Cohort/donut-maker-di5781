@@ -9,30 +9,54 @@
     flex-direction: column;
     margin: 0;
     text-align: center;
+    gap : 2em;
+    padding-top: 8em;
+    background-image: url("/img/donut-background-6.webp");
   }
 
   header {
-    background: rgba(96, 136, 221, 0.089);
-    /* height: 15vh; */
+    background: rgba(4, 66, 201, 0.089);
     text-align: center;
+    
   }
+
   header ul{
     display: flex;
     list-style: none;
-    justify-content: center
+    justify-content: center;
+    
   }
+
   header li{
     padding: 1em;
-    background-color: aqua;
+    background-color: rgb(167, 170, 9); 
+    
   }
+
   header li p{
     display: none;
+    
   }
   header li:hover p{
-    background-color: red;
+    background-color: lightseagreen;
+    position: relative;
     display: block;
-    width: 20em;
+    width: 10em;
+    text-align: center;
+    padding-left: 5px;
+   
   }
+
+  .developer{
+    display:none;
+  }
+
+  header li:hover div{
+    display: flex;
+    flex-direction: column;
+    background-color: lightseagreen;
+  }
+  
   footer{
     background: rgba(96, 136, 221, 0.089);
     height: 10vh;
@@ -44,26 +68,18 @@
     text-shadow: 0 0 3px red;
     font-size: 70;
     font-style: italic; 
-    /* color: darkblue;  */
     font-weight: bold;
     padding: .2em;
   }
-  .nav-photo{
+  .nav-menu{
     display:flex;
     height: 50px;
-  }
-  /* .header-container {
-      display: flex;
-      flex-direction: row;
-  }
-  .company-links {
-      display: flex;
-      text-align: center;
     
-  } */
+  }
+
   .donutCountBtn{
     background-color: rgb(37, 170, 214); 
-    border: 5px;
+    border: 2px solid black;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -72,7 +88,7 @@
     font-size: 16px;
     height: 70px;
     width: 300px;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   button:disabled{
     background-color : gray;
@@ -80,7 +96,8 @@
 
   .autoClickerBtn{
     background-color: rgb(37, 170, 214); 
-    border: 5px;
+    border: 2px solid black;
+    border-color: black ;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -89,11 +106,12 @@
     font-size: 16px;
     height: 70px;
     width: 300px;
-    border-radius: 5%;
+    border-radius: 5px;
+   
   }
   .multiplierBtn{
     background-color: rgb(37, 170, 214); 
-    border: 5px;
+    border: 2px solid black;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -102,11 +120,11 @@
     font-size: 16px;
     height: 70px;
     width: 300px;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   .resetBtn{
     background-color: rgb(37, 170, 214); 
-    border: 5px;
+    border: 2px solid black;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -115,19 +133,19 @@
     font-size: 16px;
     height: 70px;
     width: 300px;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   .displayCostForAutoClicker{
-    color: red;
+    color:red;
     font-size: medium;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 900;
   }
   .displayCostForMultiplier{
     color: red;
     font-size: medium;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 900;
   }
   .icon{
     object-fit: cover;
@@ -135,26 +153,6 @@
   }
   .icon1{
     height: 30px;
-
-
-  }
-  .image-text-container {
-    display: flex;
-    gap: 20px;
-  }
-  .img-company img{
-    height: 100%;;
   }
 
-  .flexItem flexItem-word {
-    text-align:left;
-    font-size: 50px;
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    /* margin-right: 7em; */
-  }
+  

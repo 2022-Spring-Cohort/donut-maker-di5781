@@ -1,11 +1,8 @@
 import DonutMaker from "/js/DonutMaker.js";
 
-// const container = (document.querySelector('.container').innerText =
-//   'Welcome to Donut Maker Game!');
-
 const containerEl = document.querySelector(".container");
 const donutMaker = new DonutMaker();
-//const companyDropDownEl = document.querySelector("#companyDropDown")
+
 let roundAutoClickerCost = 0;
 let roundDonutMultiplierCost = 0;
 let roundDonutCount = 0;
@@ -20,14 +17,15 @@ const autoClickerBtnEl = document.querySelector(".autoClickerBtn");
 const displayAutoClickerCountEl = document.querySelector(".displayAutoClicker");
 displayAutoClickerCountEl.innerText = "Donut Auto Clicker: 0";
 const displayCostForAutoClickerEl = document.querySelector(".displayCostForAutoClicker");
-roundAutoClickerCost = Math.round(donutMaker.autoClickerCost);
+
+roundAutoClickerCost = donutMaker.autoClickerCost.toFixed(2);
 displayCostForAutoClickerEl.innerText = "Cost you " +  roundAutoClickerCost + " donuts to click!";
 
 const multiplierBtnEl = document.querySelector(".multiplierBtn");
 const displayDonutMultiplierCountEl = document.querySelector(".displayMultiplier");
 displayDonutMultiplierCountEl.innerText = "Donut Multiplier: 0 "  ;                      
 const displayCostForMultiplierEl = document.querySelector(".displayCostForMultiplier");
-roundDonutMultiplierCost = Math.round(donutMaker.donutMultiplierCost);
+roundDonutMultiplierCost = donutMaker.donutMultiplierCost.toFixed(2);
 displayCostForMultiplierEl.innerText = "Cost you "+  roundDonutMultiplierCost +" donuts for the multiplier!";
 
 const resetBtnEl = document.querySelector(".resetBtn");
@@ -38,7 +36,7 @@ document.querySelector(".multiplierBtn").disabled = true;
 
 setInterval(function() {
   donutMaker.showAutoClickerInterval();
-  roundDonutCount = Math.round(donutMaker.donutCount);
+  roundDonutCount = donutMaker.donutCount.toFixed(2);
   displayDonutCountEl.innerText = "Donut Count: "+ roundDonutCount;
   checkMultiplierBtnStatus();
   checkAutoClickerBtnStatus();
@@ -48,12 +46,12 @@ const checkMultiplierBtnStatus = function() {
   const displayCostForMultiplierEl = document.querySelector(".displayCostForMultiplier");
   if (donutMaker.donutCount >= donutMaker.donutMultiplierCost) {
       document.querySelector(".multiplierBtn").disabled = false;
-      roundDonutMultiplierCost = Math.round(donutMaker.donutMultiplierCost);
+      roundDonutMultiplierCost = donutMaker.donutMultiplierCost.toFixed(2);
       displayCostForMultiplierEl.innerText = "this multiplier cost " + roundDonutMultiplierCost + " donuts";
   }
   else {
       document.querySelector(".multiplierBtn").disabled = true;
-      roundDonutMultiplierCost = Math.round(donutMaker.donutMultiplierCost);
+      roundDonutMultiplierCost = donutMaker.donutMultiplierCost.toFixed(2);
       displayCostForMultiplierEl.innerText = "next multipler cost " + roundDonutMultiplierCost + " donuts";
   }  
   changeTextColor();
@@ -63,34 +61,34 @@ const checkAutoClickerBtnStatus = function() {
   const displayCostForAutoClickerEl = document.querySelector(".displayCostForAutoClicker");
   if (donutMaker.donutCount >= donutMaker.autoClickerCost) {
       document.querySelector(".autoClickerBtn").disabled = false;
-      roundAutoClickerCost = Math.round(donutMaker.autoClickerCost);
+      roundAutoClickerCost = donutMaker.autoClickerCost.toFixed(2);
       displayCostForAutoClickerEl.innerText = "this click cost " + roundAutoClickerCost + " donuts";
   }
   else {
       document.querySelector(".autoClickerBtn").disabled = true;
-      roundAutoClickerCost = Math.round(donutMaker.autoClickerCost);
+      roundAutoClickerCost = donutMaker.autoClickerCost.toFixed(2);
       displayCostForAutoClickerEl.innerText = "next click cost " + roundAutoClickerCost + " donuts";
   }
   changeTextColor();
 }
 
 const changeTextColor = function() {
-  if (donutMaker.donutCount > 10) {
-    roundDonutCount = Math.round(donutMaker.donutCount)
+  if (donutMaker.donutCount > 150) {
+    roundDonutCount = donutMaker.donutCount.toFixed(2);
     let text = "Donut Count: "+ roundDonutCount;
     let result = "<span style='color:green'>" + text + "</span>";
     displayDonutCountEl.innerHTML = result;
   }
-  if (donutMaker.autoClicker > 2) {
-    roundAutoClicker = Math.round(donutMaker.autoClicker)
+  if (donutMaker.autoClicker > 5) {
+    roundAutoClicker = donutMaker.autoClicker.toFixed(0);
     let text = "Donut Auto Clicker: " + roundAutoClicker;
     let result = "<span style='color:orange'>" + text + "</span>";
     displayAutoClickerCountEl.innerHTML = result;
   }
-  if (donutMaker.donutMultiplier > 2) {
-    roundAutoClicker = Math.round(donutMaker.donutMultiplier);
-    let text = "Donut Multiplier: " + roundAutoClicker;
-    let result = "<span style='color:purple'>" + text + "</span>";
+  if (donutMaker.donutMultiplier > 10) {
+    roundDonutMultiplier = donutMaker.donutMultiplier.toFixed(2);
+    let text = "Donut Multiplier: " + roundDonutMultiplier;
+    let result = "<span style='color:yellow'>" + text + "</span>";
     displayDonutMultiplierCountEl.innerHTML = result;
   }
 }
@@ -99,7 +97,7 @@ donutCountBtnrEl.addEventListener("click", () => {
   donutMaker.addToDonutCount();
   checkMultiplierBtnStatus();
   checkAutoClickerBtnStatus();
-  roundDonutCount = Math.round(donutMaker.donutCount);
+  roundDonutCount = donutMaker.donutCount.toFixed(2);
   displayDonutCountEl.innerText = "Donut Count: "+ roundDonutCount;
 
 });
@@ -107,9 +105,9 @@ donutCountBtnrEl.addEventListener("click", () => {
 // Multipliers
 multiplierBtnEl.addEventListener("click", () => {
   donutMaker.buyDonutMultiplier();
-  roundDonutCount = Math.round(donutMaker.donutCount);
+  roundDonutCount = donutMaker.donutCount.toFixed(2);
   displayDonutCountEl.innerText = "Donut Count: "+ roundDonutCount;
-  roundDonutMultiplier = Math.round(donutMaker.donutMultiplier)
+  roundDonutMultiplier = donutMaker.donutMultiplier.toFixed(2);
   displayDonutMultiplierCountEl.innerText = "Donut Multiplier: " + roundDonutMultiplier;
   checkMultiplierBtnStatus();
   checkAutoClickerBtnStatus();
@@ -119,9 +117,9 @@ multiplierBtnEl.addEventListener("click", () => {
 // auto clicker
 autoClickerBtnEl.addEventListener("click", () => {
   donutMaker.buyDonutAutoClicker();
-  roundDonutCount = Math.round(donutMaker.donutCount);
+  roundDonutCount = donutMaker.donutCount.toFixed(2);
   displayDonutCountEl.innerText = "Donut Count: "+ roundDonutCount;
-  roundAutoClicker = Math.round(donutMaker.autoClicker)
+  roundAutoClicker = donutMaker.autoClicker.toFixed(0);
   displayAutoClickerCountEl.innerText = "Donut Auto Clicker: " + roundAutoClicker;
   checkAutoClickerBtnStatus();
   checkMultiplierBtnStatus();

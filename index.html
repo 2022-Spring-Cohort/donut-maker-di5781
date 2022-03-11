@@ -5,62 +5,73 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fred the Baker Baking Company</title>
+  <title>Donut Maker Game</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <header class="header-container">
+    <h1>Oneline Donut Maker Game</h1>
 
-    <!-- <img class="icon" src="/img/Donut_Maker.png" alt=""> -->
-    <h1>Diane's Game Online Company</h1>
-    <div class="nav-photo">
-      <img class="icon" src="/img/Donut-Company.jfif" alt="">
-
-      <ul>
-        <li id="companyDropDown">Fred the Baker Baking Company <p>Lorem ipsum dolor </p>
-        </li>
-        <li>Donut Maker Game </li>
-        <li>About The Game</li>
-        <li>Game Developer information</li>
-      </ul>
-    </div>
-
-
-    
-
-
+    <ul class="nav-menu">
+      <li id="companyDropDown">Fred Baker Baking Company
+        <div>
+          <p>Our goal for our customer is allowing our guests to interact with our brand in a way that best fits their needs. Check company webite for more details. <a href="https://www.duckdonuts.com/dublin/" target="_blank">Fred Baker Baking Company</a></p>
+        </div>
+      </li>
+      <li id="aboutGame">About Donut Maker Game
+        <div>
+          <p>Collaborate With Other Channels. What you may want to do for your gaming channel is work with other gaming channels! This game idea is comming from <a href="https://cookie-clicker.co/" target="_blank">Cookier
+              Maker</a>
+          </p>
+        </div>
+      </li>
+      <li id="gameDeveloper">Game Developer information
+        <div class="developer">
+          <div>
+            <a href="https://di5781.github.io" target="_blank">Abount</a>
+          </div>
+          <div>
+            <a href="https://di5781.github.io/resume.html" target="_blank">Portfolio</a> 
+          </div>
+          <div>
+            <a href="https://github.com/di5781" target="_blank">Git</a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </header>
+
   <div class="container">
-    <div class="DonutCount">
-      <h1 class="displayDonutCount">Current donut count!</h1>
+    <section class="DonutCount">
+      <h1 class="displayDonutCount" style="font-weight: 900; color: darkorchid;">Current donut count!</h1>
       <button class="donutCountBtn"> <img src="/img/donut_count.png" height="45" width="55" /> &nbsp; &nbsp; &nbsp;
         <span style="font-size:x-large;">Donut Click</span></button>
-    </div>
-    <div class="autoClicker">
-      <h1 class="displayAutoClicker">Display auto Clicker</h1>
+    </section>
+    <section class="autoClicker">
+      <h1 class="displayAutoClicker" style="font-weight: 900; color: darkorchid;">Display auto Clicker</h1>
       <button class="autoClickerBtn" id="autoClicker"> <img src="/img/auto-click.png" height="45" width="55"
           style="justify-content: left;" /> &nbsp; &nbsp; &nbsp; <span style="font-size:x-large;">Auto
           Clicker</span></button>
       <p class="displayCostForAutoClicker">Cost
         you 100 donuts to click this button</p>
-    </div>
-    <div class="multiplier">
-      <h1 class="displayMultiplier">Current donut Multiplier</h1>
-      <button class="multiplierBtn" id="multipliers"> <img src="/img/multiplier.png" height="45" width="55" /> &nbsp;
+    </section>
+    <section class="multiplier">
+      <h1 class="displayMultiplier" style="font-weight: 900; color: darkorchid;">Current donut Multiplier</h1>
+      <button class="multiplierBtn" id="multipliers"> <img src="./img/multiplier.png" height="45" width="55" /> 
         <span style="font-size:x-large;">Donut Multiplier</span></button>
       <p class="displayCostForMultiplier">Cost
         you 10 donuts to click this button</p>
-    </div>
-    <br><br>
-    <div class="reset">
+    </section>
+    <section class="reset">
       <button class="resetBtn"> <img src="/img/reset-4.png" height="45" width="55" /> &nbsp; <span
           style="font-size:x-large;">Reset Game</span> </button>
-    </div>
+    </section>
   </div>
 
   <footer class="footer-container">
-    <p style="color: darkred; text-align: center; font-size: small; padding-top: 8px;"> &copy 2022</p>
+    <p style="color: darkblue; text-align: center; font-size: medium; font-style: italic; padding-top: 8px;"> &copy
+      Happy Gaming 2022</p>
   </footer>
   <script src="/js/DonutMakerApp.js" type="module"></script>
 </body>

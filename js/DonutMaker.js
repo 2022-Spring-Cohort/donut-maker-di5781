@@ -1,9 +1,9 @@
 export default class DonutMaker {
 
     constructor(donutCount, autoClicker, donutMultiplier) {
-        this.donutCount = donutCount;
-        this.autoClicker = autoClicker;
-        this.donutMultiplier = donutMultiplier;
+        // this.donutCount = donutCount;
+        // this.autoClicker = autoClicker;
+        // this.donutMultiplier = donutMultiplier;
 
         this.donutCount = 0;
         this.autoClicker = 0;
